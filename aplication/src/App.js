@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import FirstApp from './components/FirstApp.js';
+import CounterComponent from "./components/CounterComponent.jsx";
 
 function App() {
   return (
     <div>
-      <FirstApp />
+      <h1>Counter App</h1>
+      <CounterComponent value = {10} />
     </div>
   );
 }
