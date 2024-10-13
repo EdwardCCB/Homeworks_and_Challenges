@@ -1,14 +1,15 @@
 const express = require('express');
-const routes = require('./routes');
+const bodyParser = require('body-parser');
+const familyRoutes = require('./routes/family');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(express.json());
+app.use(bodyParser.json());
 
 // Usar las rutas
-app.use('/api/atm', routes);
+app.use('/api/family', familyRoutes);
 
 // Iniciar el servidor
 app.listen(PORT, () => {
